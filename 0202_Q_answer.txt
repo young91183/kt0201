@@ -71,3 +71,19 @@ left = 13
 right = 17
 c = solution(left, right)
 print(c)
+
+
+-------------------------------------------------------
+# Q4 Answer Template
+data = input('숫자로 이루어진 문자열을 입력하세요. ')
+temp = int(data[0])
+for i in range(1,len(data)):
+    x = int(data[i])
+    if x != 0 and temp != 0:
+        temp = temp*x
+    else :
+        temp += x
+        
+result = temp
+
+print(result)
