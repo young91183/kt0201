@@ -87,3 +87,47 @@ for i in range(1,len(data)):
 result = temp
 
 print(result)
+
+
+----------------------------------------------------------
+# Q5 Answer Template
+
+n = input('숫자를 입력하세요. : ')
+l = len(n)
+left = 0
+right = 0
+for i in range(l):
+    if i < l//2:
+        left += int(n[i])
+    else :
+        right += int(n[i])
+        
+if left == right:
+    print("LUCKY")
+else:
+    print('READY')
+
+
+--------------------------------------------------------------
+# Q6 Answer template
+
+def solution(n):
+    answer = 0
+    for i in range(n):
+        if i*i > n:
+            break
+        if i*i == n:
+            answer = i + 1
+            break
+    return answer
+
+n = int(input())
+an = solution(n)
+if an == 0:
+    print(-1)
+else :
+    print(an**2)
+
+-------------------------------------------------------------------
+----------------------------END------------------------------------
+-------------------------------------------------------------------
