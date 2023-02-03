@@ -1,22 +1,13 @@
-# Q1 Answer template
+# Q6 Answer template
 
-def solution(lottos, win_nums):
-    answer = [7,7]
-    for i in range(6):
-        if lottos[i] == 0:
-            answer[0] -= 1
-            continue
-        for j in range(6):
-            if lottos[i] == win_nums[j]:
-                answer[0] -= 1
-                answer[1] -= 1
-                
-    for i in range(2): #0점일때 6등처리
-        if answer[i] == 7:
-            answer[i] = 6
-    return answer
+def solution(arr):
+    if len(arr) == 1:
+        arr[0] = -1
+    else:
+        arr.sort(reverse = True)
+        arr.pop()
+    return arr
 
-lottos = [44, 1, 0, 0, 31, 25]
-win_nums = [31, 10, 45, 1, 6, 19]
-answer = solution(lottos, win_nums)
+arr = [4, 3, 2, 1]
+answer = solution(arr)
 print(answer)
