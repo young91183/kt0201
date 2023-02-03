@@ -1,15 +1,18 @@
-def min_of(a):
-    minimum = a[0]
-    for i in range(1, len(a)):
-        if a[i] < minimum:
-            minimum = a[i]
-    return minimum
+# Q1 Answer template
 
-t = (4, 7, 5.6, 2, 3.14, 1)
-s = 'string'
-a = ['DTS', 'AAC', 'FLAC']
-print(f'{min_of(t)}')
-print(f'{min_of(s)}')
-print(f'{min_of(a)}')
+def solution(lottos, win_nums):
+    answer = [7,7]
+    for i in range(6):
+        if lottos[i] == 0:
+            answer[0] -= 1
+            continue
+        for j in range(6):
+            if lottos[i] == win_nums[j]:
+                answer[0] -= 1
+                answer[1] -= 1
+    return answer
 
-print('\n',min(t),min(s),min(a),sep="\n")
+lottos = [44, 1, 0, 0, 31, 25]
+win_nums = [31, 10, 45, 1, 6, 19]
+answer = solution(lottos, win_nums)
+print(answer)
