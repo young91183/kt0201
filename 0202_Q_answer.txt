@@ -10,7 +10,8 @@ def solution(lottos, win_nums):
             if lottos[i] == win_nums[j]:
                 answer[0] -= 1
                 answer[1] -= 1
-    for i in range(2):
+                
+    for i in range(2): #0점일때 6등처리
         if answer[i] == 7:
             answer[i] = 6
     return answer
