@@ -7,7 +7,7 @@ def solution(arr):
         arr.sort(reverse = True)
         mi = arr.pop()
         if min(arr) == mi: # 중복처리 부분
-            solution (arr)
+            solution(arr)
         else:
             return arr
     return arr
