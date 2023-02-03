@@ -5,9 +5,13 @@ def solution(arr):
         arr[0] = -1
     else:
         arr.sort(reverse = True)
-        arr.pop()
+        mi = arr.pop()
+        if min(arr) == mi: # 중복처리 부분
+            solution (arr)
+        else:
+            return arr
     return arr
 
-arr = [4, 3, 2, 1]
+arr = [4, 3, 2, 1,1,1]
 answer = solution(arr)
 print(answer)
